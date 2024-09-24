@@ -1,5 +1,5 @@
 import {NavLink} from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
 import {navItems, systemItems} from "../constants/index.jsx"; // Import data
 import {useState} from "react";
 import {FaXmark} from "react-icons/fa6";
@@ -19,26 +19,26 @@ const Navbar = () => {
         setIsMoreMenuOpen(false);
     }
 
-    const toggleMoreMenu = () => {
-        setIsMoreMenuOpen(!isMoreMenuOpen); // Toggle mobile menu open/close
+    const toggleMoreMenu = (isBool) => {
+        setIsMoreMenuOpen(isBool); // Toggle mobile menu open/close
         setIsSysMenuOpen(false);
-        setMoreMenuActive(!isMoreMenuActive); // Toggle the active state
+        setMoreMenuActive(isBool); // Toggle the active state
         setSysMenuActive(false); // Toggle the active state
     }
 
-    const toggleSysMenu = () => {
-        setIsSysMenuOpen(!isSysMenuOpen); // Toggle mobile menu open/close
+    const toggleSysMenu = (isBool) => {
+        setIsSysMenuOpen(isBool); // Toggle mobile menu open/close
         setIsMoreMenuOpen(false);
-        setSysMenuActive(!isSysMenuActive); // Toggle the active state
+        setSysMenuActive(isBool); // Toggle the active state
         setMoreMenuActive(false); // Toggle the active state
     }
 
 
     return (
         <>
-            <header className="fixed top-0 left-0 border-b right-0 bg-white z-50">
-                <nav className='md:px-3 px-3 mx-auto flex max-w-screen-xl items-center'>
-                    <img src={logo} alt="Logo" className="h-[50px] pt-4"/>
+            <header className="fixed top-0 left-0 right-0 bg-white z-50">
+                <nav className='md:px-3 px-6 mx-auto flex max-w-screen-xl items-center'>
+                    <img src={logo} alt="Logo" className="h-[50px] pt-2 pb-2"/>
 
                     <div className="flex justify-between w-full">
                         <ul className='md:flex ml-4 text-sm font-semibold hidden'>
@@ -48,27 +48,25 @@ const Navbar = () => {
                                         key={index}
                                         onMouseEnter={(e) => {
                                             if (item.path === "/more") {
-                                                e.preventDefault(); // Stop navigation for dropdowns
-                                                toggleMoreMenu(); // Open or close the dropdown
+                                                toggleMoreMenu(true); // Open or close the dropdown
+                                                setIsHoveringMore(true); // Keep track of hovering
                                             }
                                         }}
                                         onMouseLeave={() => {
                                             if (item.path === "/more") {
-                                                toggleMoreMenu(); // Close the dropdown
+                                                toggleMoreMenu(false); // Close the dropdown
                                             }
                                         }}
                                     >
                                         <li>
                                             <NavLink
                                                 to={item.path}
-                                                onMouseEnter={(e) => {
+                                                onClick={(e) => {
                                                     if (item.path === "/more") {
                                                         e.preventDefault(); // Stop navigation for dropdowns
-                                                        setIsHoveringMore(true); // Keep track of hovering
+                                                    } else {
+                                                        toggleMoreMenu(false); // Close the dropdown before navigation
                                                     }
-                                                }}
-                                                onClick={(e) => {
-                                                    e.preventDefault(); // Stop navigation for dropdowns
                                                 }}
                                             >
                                                 {({isActive}) => (
@@ -94,7 +92,7 @@ const Navbar = () => {
             transition-opacity duration-300 ${isMoreMenuOpen ? 'opacity-100 delay-300' : 'opacity-0'}`}
                                                 ></div>
                                                 <div
-                                                    className="absolute top-[-10px] bg-[#F8F8F8] left-[-40px] shadow-xl mt-2 w-36">
+                                                    className="absolute top-[-10px] bg-[#F8F8F8] left-[-50px] shadow-xl mt-2 w-44">
                                                     <ul className={`flex flex-col overflow-hidden transition-all ease-out duration-300 ${isMoreMenuOpen ? 'h-[6.8rem]' : 'h-0'}`}>
                                                         {item.children.map((child, childIndex) => (
                                                             <li key={childIndex}>
@@ -123,27 +121,25 @@ const Navbar = () => {
                                         key={index}
                                         onMouseEnter={(e) => {
                                             if (item.path === "/more") {
-                                                e.preventDefault(); // Stop navigation for dropdowns
-                                                toggleSysMenu(); // Open or close the dropdown
+                                                toggleSysMenu(true); // Open or close the dropdown
+                                                setIsHoveringMore(true); // Keep track of hovering
                                             }
                                         }}
                                         onMouseLeave={() => {
                                             if (item.path === "/more") {
-                                                toggleSysMenu(); // Close the dropdown
+                                                toggleSysMenu(false); // Close the dropdown
                                             }
                                         }}
                                     >
                                         <li>
                                             <NavLink
                                                 to={item.path}
-                                                onMouseEnter={(e) => {
+                                                onClick={(e) => {
                                                     if (item.path === "/more") {
                                                         e.preventDefault(); // Stop navigation for dropdowns
-                                                        setIsHoveringMore(true); // Keep track of hovering
+                                                    } else {
+                                                        toggleSysMenu(false); // Close the dropdown before navigation
                                                     }
-                                                }}
-                                                onClick={(e) => {
-                                                    e.preventDefault(); // Stop navigation for dropdowns
                                                 }}
                                             >
                                                 {({isActive}) => (
@@ -170,7 +166,7 @@ const Navbar = () => {
                                                 ></div>
                                                 <div
                                                     className="absolute top-[-10px] bg-[#F8F8F8] shadow-lg mt-2 w-36">
-                                                    <ul className={`flex flex-col overflow-hidden transition-all ease-out duration-300 ${isSysMenuOpen ? 'h-[9.1rem]' : 'h-0'}`}>
+                                                    <ul className={`flex flex-col overflow-hidden transition-all ease-out duration-300 ${isSysMenuOpen ? 'h-[11.3rem]' : 'h-0'}`}>
                                                         {item.children.map((child, childIndex) => (
                                                             <li key={childIndex}>
                                                                 <NavLink
@@ -196,8 +192,8 @@ const Navbar = () => {
                     <div className="md:hidden">
                         <button onClick={toggleMenu} className='cursor-pointer'>
                         <span
-                            className={`transition-transform duration-300 text-[#056C9D] ease-in-out ${isMenuOpen ? 'rotate-180' : ''}`}>
-                            {isMenuOpen ? <FaXmark className='w-5 h-5'/> : <FaBars className='w-5 h-5'/>}
+                            className={`transition-transform duration-300 text-primaryBlue ease-in-out ${isMenuOpen ? 'rotate-180' : ''}`}>
+                            {isMenuOpen ? <FaXmark className='w-7 h-7 hover:bg-[#DCDCDC]'/> : <FaBars className='w-8 h-8 p-1 hover:bg-[#DCDCDC]'/>}
                         </span>
                         </button>
                     </div>
@@ -206,7 +202,7 @@ const Navbar = () => {
             </header>
             {/*menu items only for mobile*/}
             <div className="mt-[3.2rem]">
-                <ul className={`md:hidden overflow-hidden block gap-12 text-lg ${isMenuOpen ? `w-full transition-all ease-out duration-150 ${isMoreMenuOpen ? 'h-[25.3rem]' : isSysMenuOpen ? 'h-[25.3rem]' : 'h-[16.3rem]'}` : 'h-0'}`}>
+                <ul className={`md:hidden overflow-hidden block gap-12 text-lg ${isMenuOpen ? `w-full transition-all ease-out duration-150 ${isMoreMenuOpen ? 'h-[25.3rem]' : isSysMenuOpen ? 'h-[30.5rem]' : 'h-[16.3rem]'}` : 'h-0'}`}>
                     {
                         navItems.map((item, index) => (
                             <div key={index}>
@@ -216,7 +212,7 @@ const Navbar = () => {
                                         onClick={(e) => {
                                             if (item.path === "/more") {
                                                 e.preventDefault(); // Stop navigation for dropdowns
-                                                toggleMoreMenu(); // Close the menu after clicking
+                                                toggleMoreMenu((prevState) => !prevState);
                                             }
                                         }}
                                     >
@@ -262,8 +258,8 @@ const Navbar = () => {
                                         onClick={(e) => {
                                             if (item.path === "/more") {
                                                 e.preventDefault(); // Stop navigation for dropdowns
+                                                toggleSysMenu((prevState) => !prevState); // Toggle the submenu
                                             }
-                                            toggleSysMenu(); // Toggle the submenu
                                         }}
                                     >
                                         {({isActive}) => (
@@ -280,7 +276,7 @@ const Navbar = () => {
 
                                 {/* Dropdown for /more in systemItems */}
                                 {item.path === "/more" && (
-                                    <ul className={`text-[14px] bg-[#F8F8F8] font-medium overflow-hidden ${isSysMenuOpen ? 'w-full transition-all ease-out duration-150 h-[9rem]' : 'h-0'}`}>
+                                    <ul className={`text-[14px] bg-[#F8F8F8] font-medium overflow-hidden ${isSysMenuOpen ? 'w-full transition-all ease-out duration-150 h-[14.3rem]' : 'h-0'}`}>
                                         {item.children.map((child, childIndex) => (
                                             <li key={childIndex}
                                                 className="border-b pl-6 border-b-gray-200 text-gray-500 hover:text-black transition-all ease-out duration-150">
