@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-item .nav-icon {
+    filter: invert(35%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(85%) contrast(90%);
+    transition: filter 0.3s ease-in-out, brightness 0.3s ease-in-out;
+}
+
+.nav-active {
+    background-color: #045894;
+    color: white;
+}
+
+.nav-item:hover .nav-icon , .nav-active .nav-icon {
+    filter: invert(100%) brightness(100%);
+}
+
+
