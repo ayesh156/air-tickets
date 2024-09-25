@@ -15,7 +15,6 @@
     "@mui/material": "^6.1.1",
     "@mui/styled-engine": "^6.1.1",
     "@mui/x-date-pickers": "^7.18.0",
-    "@mui/x-date-pickers-pro": "^7.18.0",
     "autoprefixer": "^10.4.20",
     "dayjs": "^1.11.13",
     "postcss": "^8.4.47",
