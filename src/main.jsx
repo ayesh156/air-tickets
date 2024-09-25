@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         children: [ // Child routes under the base path
             {
                 path: "/", // Home route
-                element: <Construction />, // Component to render for the home route
+                element: <Home />, // Component to render for the home route
             },
             {
                 path: "/mall",
