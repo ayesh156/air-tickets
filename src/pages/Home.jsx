@@ -34,12 +34,13 @@ const Home = () => {
 
     return (
         <div className="relative text-white w-full mt-12">
-            <div className="relative h-[31.6rem] bg-[#D93B07] overflow-hidden px-[5.5rem]">
+            <div className="relative h-[31.6rem] bg-[#D93B07] overflow-hidden">
                 {/* Image and buttons container */}
                 <img className="absolute bottom-[-2rem] h-96" src={travel_img} alt={travel_img}/>
 
                 {/* Dynamically generating buttons using map */}
-                <div className="absolute space-x-3 text-[12px] top-[3.2rem] font-semibold left-48">
+                <div className="absolute text-[12px] top-[3.2rem] font-semibold w-full">
+                    <div className="flex 2xl:justify-start justify-center space-x-3 2xl:pl-[12rem]">
                     {buttons.map((button, index) => (
                         <button
                             key={index}
@@ -49,10 +50,11 @@ const Home = () => {
                             {button.name}
                         </button>
                     ))}
+                    </div>
                 </div>
 
                 {/* Content box that updates based on button click */}
-                <div className="absolute flex flex-row gap-2 top-20 w-80 mt-4 left-48 bg-transparent">
+                <div className="absolute top-20 mt-4 w-full flex justify-center">
                     {renderActiveContent()}
                 </div>
             </div>
