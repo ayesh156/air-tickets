@@ -19,6 +19,11 @@ import iata from "../assets/footer-img/iata-logo.jpg";
 import iifa from "../assets/footer-img/iifa-logo.png";
 import sn_initial from "../assets/footer-img/sn-initial-logo.jpg";
 
+import s_img from "../assets/home-img/flag-img/Flag_of_Sri_Lanka.png";
+import i_img from "../assets/home-img/flag-img/Flag_of_India.png";
+import sp_img from "../assets/home-img/flag-img/Flag_of_Singapore.png";
+import uk_img from "../assets/home-img/flag-img/Flag_of_United_Kingdom.png";
+
 export const footerDetailsImg = [
     {
         title: "Member of",
@@ -138,4 +143,47 @@ export const footerLinks = [
     {href: "/customer-support", text: "Customer Support"},
     {href: "/faq", text: "FAQ"},
     {href: "/contact", text: "Contact Us"}
+];
+
+// travellersCategoryArray
+export const travellersCategoryArray = [
+    { label: "Adults", age: null, count: 1 },
+    { label: "Child", age: "(2-11 YRS)", count: 0 },
+    { label: "Infants", age: "(Below 2 YRS)", count: 0 }
+];
+
+// travellersClass
+export const travellersClass = ["Economy", "Premium Economy", "Business", "First"];
+
+export const citiesItem = [
+    {
+        title: 'Sri Lanka',
+        img: s_img,
+        options: [
+            {label: 'Colombo', description: 'Bandaranaike Intl Arpt', flight: "CMB"},
+            {label: 'Jaffna', description: 'Jaffna Intl Arpt', flight: "JAF"},
+        ],
+    },
+    {
+        title: 'India',
+        img: i_img,
+        options: [
+            {label: 'Delhi', description: 'Delhi Indira Gandhi Intl', flight: "DEL"},
+            {label: 'Chennai', description: 'Chennai Arpt', flight: "MAA"},
+        ],
+    },
+    {
+        title: 'Singapore',
+        img: sp_img,
+        options: [
+            {label: 'Singapore', description: 'Changi Intl Arpt', flight: "SIN"},
+        ],
+    },
+    {
+        title: 'UK',
+        img: uk_img,
+        options: [
+            {label: 'London', description: 'London, UK - All Airports (LON)', flight: "LON"},
+        ],
+    },
 ];
