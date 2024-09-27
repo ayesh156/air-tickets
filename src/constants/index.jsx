@@ -24,6 +24,12 @@ import i_img from "../assets/home-img/flag-img/Flag_of_India.png";
 import sp_img from "../assets/home-img/flag-img/Flag_of_Singapore.png";
 import uk_img from "../assets/home-img/flag-img/Flag_of_United_Kingdom.png";
 
+import air_asia_img from "../assets/home-img/hero-slider-image/Air-Asia-FM.jpg";
+import madness_img from "../assets/home-img/hero-slider-image/Travel-Madness-FM.jpg";
+import banner_img from "../assets/home-img/hero-slider-image/Home-Banner-FM.jpg";
+import indigo_img from "../assets/home-img/hero-slider-image/Indigo-Flights-FM.jpg";
+import chennai_img from "../assets/home-img/hero-slider-image/Flights-to-Chennai-FM.jpg";
+
 export const footerDetailsImg = [
     {
         title: "Member of",
@@ -187,3 +193,11 @@ export const citiesItem = [
         ],
     },
 ];
+
+export const homeHeroImgSlider = [
+    { image: air_asia_img, title: "Fly with Air Asia", label: "Airfares from Colombo to Bangkok, Kuala Lumpur and many more" },
+    { image: madness_img, title: "Travel Madness", label: "Up to 20% discount on flights" },
+    { image: banner_img, title: "Split Pay", label: "Split your payment into 3x Installments" },
+    { image: indigo_img, title: "Book Indigo Flight Tickets", label: "From Colombo to India and many more" },
+    { image: chennai_img, title: "Flight Tickets to India", label: "Reserve your seat today!" },
+]
