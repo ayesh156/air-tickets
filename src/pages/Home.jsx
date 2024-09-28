@@ -107,7 +107,7 @@ const Home = () => {
 
                 {/* Dynamically generating buttons using map */}
                 <div className="absolute text-[12px] top-[3.2rem] font-semibold w-full">
-                    <div className="flex 2xl:justify-start justify-center space-x-3 2xl:pl-[12rem]">
+                    <div className="flex 2xl:justify-start justify-center space-x-3 2xl:pl-[11rem]">
                         {buttons.map((button, index) => (
                             <button
                                 key={index}
