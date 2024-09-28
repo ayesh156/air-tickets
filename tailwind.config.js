@@ -8,7 +8,9 @@ export default {
       colors: {
         titleGray :"#646D73",
         primaryBlue : "#045894",
-        btnOrange: "#FB4F0F"
+        primaryOrange: '#FB4F0F',
+        primaryGreen: '#28A700',
+        primaryLightBlue: '#2EA6FF',
       },
       boxShadow: {
         btnShadow: 'inset 0 2px 5px rgba(0, 0, 0, 0.2)', // Adjust values as needed

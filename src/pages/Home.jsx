@@ -5,6 +5,9 @@ import FlightOnWay from "../components/FlightOnWay.jsx";
 import FlightRoundTrip from "../components/FlightRoundTrip.jsx";
 import FlightMultiCity from "../components/FlightMultiCity.jsx";
 import HomeHeroImageSlider from "../components/HomeHeroImageSlider.jsx";
+import FaresSection from "../components/FaresSection.jsx";
+import PartnerImageSlider from "../components/common/PartnerImageSlider.jsx";
+import {partnersImgSlider} from "../constants/index.jsx";
 
 const Home = () => {
 
@@ -114,12 +117,14 @@ const Home = () => {
                 </div>
 
                 {/* New content with paragraph positioned absolutely */}
-                <div className={`lg:absolute h-[31.3rem] ${activeContent === "multiCity" ? divHeight > "31.6rem" ? "top-[40rem]" : "top-[29.7rem]" : "top-[21rem]"} px-1 sm:px-10 md:px-20 xl:px-48 w-full`}>
-                    <HomeHeroImageSlider />
+                <div
+                    className={`lg:absolute h-[31.3rem] ${activeContent === "multiCity" ? divHeight > "31.6rem" ? "top-[40rem]" : "top-[29.7rem]" : "top-[21rem]"} px-1 sm:px-10 md:px-20 xl:px-48 w-full`}>
+                    <HomeHeroImageSlider/>
                 </div>
             </div>
-
-            <div className="h-screen"></div>
+            <FaresSection />
+            <PartnerImageSlider data={partnersImgSlider[0]} />
+            <PartnerImageSlider data={partnersImgSlider[1]} />
         </div>
     )
 }

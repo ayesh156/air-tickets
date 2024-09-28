@@ -8,7 +8,7 @@ import {LiaFacebookF} from "react-icons/lia";
 import {FaYoutube} from "react-icons/fa6";
 import {FaInstagram} from "react-icons/fa6";
 import {TiSocialTwitter} from "react-icons/ti";
-import { FaLinkedinIn } from "react-icons/fa6";
+import {FaLinkedinIn} from "react-icons/fa6";
 
 import mastercard from "../assets/payment-method-img/mastercard-logo.png";
 import visa from "../assets/payment-method-img/visa-logo.jpg";
@@ -30,6 +30,33 @@ import banner_img from "../assets/home-img/hero-slider-image/Home-Banner-FM.jpg"
 import indigo_img from "../assets/home-img/hero-slider-image/Indigo-Flights-FM.jpg";
 import chennai_img from "../assets/home-img/hero-slider-image/Flights-to-Chennai-FM.jpg";
 
+import s_airline_img from "../assets/home-img/airline_slider_img/srilankan-airline.png";
+import j_airline_img from "../assets/home-img/airline_slider_img/japan-airlines-jal-logo.png";
+import a_airline_img from "../assets/home-img/airline_slider_img/american-airlines-logo.png";
+import c_airline_img from "../assets/home-img/airline_slider_img/china-airlines-logo.png";
+import t_airline_img from "../assets/home-img/airline_slider_img/turkish-airlines-logo.png";
+import m_airline_img from "../assets/home-img/airline_slider_img/malaysia-airlines-logo.png";
+import au_airline_img from "../assets/home-img/airline_slider_img/Austrian_Airlines-logo.png";
+import p_airline_img from "../assets/home-img/airline_slider_img/pia-pakistan-international-airlines.png";
+import si_airline_img from "../assets/home-img/airline_slider_img/singapore-airlines-logo.png";
+import e_airline_img from "../assets/home-img/airline_slider_img/Emirates_Airlines-logo.png";
+
+import a_payment_img from "../assets/home-img/payment-img/american-express.svg";
+import g_payment_img from "../assets/home-img/payment-img/google-wallet.svg";
+import ma_payment_img from "../assets/home-img/payment-img/maestro.svg";
+import m_payment_img from "../assets/home-img/payment-img/mastercard.svg";
+import v_payment_img from "../assets/home-img/payment-img/visa.svg";
+import p_payment_img from "../assets/home-img/payment-img/paypal.svg";
+import s_payment_img from "../assets/home-img/payment-img/skrill.svg";
+import u_payment_img from "../assets/home-img/payment-img/unionpay.svg";
+import sh_payment_img from "../assets/home-img/payment-img/shopify.svg";
+import az_payment_img from "../assets/home-img/payment-img/amazon.svg";
+
+import fares_img1 from "../assets/home-img/fares_img/smCX.gif";
+import fares_img2 from "../assets/home-img/fares_img/smCA.gif";
+import fares_img3 from "../assets/home-img/fares_img/smEK.gif";
+import fares_img4 from "../assets/home-img/fares_img/smQR.gif";
+
 export const footerDetailsImg = [
     {
         title: "Member of",
@@ -37,7 +64,7 @@ export const footerDetailsImg = [
     },
     {
         title: "Awards",
-        images: [iifa,sn_initial] // No images in this section
+        images: [iifa, sn_initial] // No images in this section
     },
     {
         title: "We Accept",
@@ -153,9 +180,9 @@ export const footerLinks = [
 
 // travellersCategoryArray
 export const travellersCategoryArray = [
-    { label: "Adults", age: null, count: 1 },
-    { label: "Child", age: "(2-11 YRS)", count: 0 },
-    { label: "Infants", age: "(Below 2 YRS)", count: 0 }
+    {label: "Adults", age: null, count: 1},
+    {label: "Child", age: "(2-11 YRS)", count: 0},
+    {label: "Infants", age: "(Below 2 YRS)", count: 0}
 ];
 
 // travellersClass
@@ -195,9 +222,278 @@ export const citiesItem = [
 ];
 
 export const homeHeroImgSlider = [
-    { image: air_asia_img, title: "Fly with Air Asia", label: "Airfares from Colombo to Bangkok, Kuala Lumpur and many more" },
-    { image: madness_img, title: "Travel Madness", label: "Up to 20% discount on flights" },
-    { image: banner_img, title: "Split Pay", label: "Split your payment into 3x Installments" },
-    { image: indigo_img, title: "Book Indigo Flight Tickets", label: "From Colombo to India and many more" },
-    { image: chennai_img, title: "Flight Tickets to India", label: "Reserve your seat today!" },
+    {
+        image: air_asia_img,
+        title: "Fly with Air Asia",
+        label: "Airfares from Colombo to Bangkok, Kuala Lumpur and many more"
+    },
+    {image: madness_img, title: "Travel Madness", label: "Up to 20% discount on flights"},
+    {image: banner_img, title: "Split Pay", label: "Split your payment into 3x Installments"},
+    {image: indigo_img, title: "Book Indigo Flight Tickets", label: "From Colombo to India and many more"},
+    {image: chennai_img, title: "Flight Tickets to India", label: "Reserve your seat today!"},
 ]
+
+export const partnersImgSlider = [
+    {
+    title: "Airline Partners",
+    label:"Travel around the world with our airline partners.",
+    images:[
+        {image:s_airline_img, link:"#"},
+        {image:j_airline_img, link:"#"},
+        {image:a_airline_img, link:"#"},
+        {image:c_airline_img, link:"#"},
+        {image:t_airline_img, link:"#"},
+        {image:m_airline_img, link:"#"},
+        {image:au_airline_img, link:"#"},
+        {image:p_airline_img, link:"#"},
+        {image:si_airline_img, link:"#"},
+        {image:e_airline_img, link:"#"},
+    ]
+    },
+    {
+        title: "Payment Partners",
+        label:"Wide range of payment options with our bank partners.",
+        images:[
+            {image:u_payment_img, link:"#"},
+            {image:s_payment_img, link:"#"},
+            {image:p_payment_img, link:"#"},
+            {image:v_payment_img, link:"#"},
+            {image:m_payment_img, link:"#"},
+            {image:ma_payment_img, link:"#"},
+            {image:g_payment_img, link:"#"},
+            {image:a_payment_img, link:"#"},
+            {image:sh_payment_img, link:"#"},
+            {image:az_payment_img, link:"#"},
+        ]
+    }
+]
+
+
+// fareData
+export const fareData = {
+    October: [
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "28/10/2024",
+            image: fares_img2,
+            link: "/flights/sydney"
+        },
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "29/10/2024",
+            image: fares_img2,
+            link: "/flights/sydney"
+        },
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "30/10/2024",
+            image: fares_img4,
+            link: "/flights/sydney"
+        },
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "31/10/2024",
+            image: fares_img2,
+            link: "/flights/sydney"
+        },
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "01/10/2024",
+            image: fares_img1,
+            link: "/flights/sydney"
+        },
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "02/10/2024",
+            image: fares_img2,
+            link: "/flights/sydney"
+        },
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "03/10/2024",
+            image: fares_img3,
+            link: "/flights/sydney"
+        },
+        {
+            to: "Sydney",
+            oldPrice: "LKR 316,395",
+            newPrice: "LKR 227,897",
+            airline: "Cathay Pacific",
+            date: "04/10/2024",
+            image: fares_img4,
+            link: "/flights/sydney"
+        }
+    ],
+    November: [
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "05/11/2024",
+            image: fares_img4,
+            link: "/flights/newyork"
+        },
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "06/11/2024",
+            image: fares_img3,
+            link: "/flights/newyork"
+        },
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "07/11/2024",
+            image: fares_img1,
+            link: "/flights/newyork"
+        },
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "08/11/2024",
+            image: fares_img2,
+            link: "/flights/newyork"
+        },
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "09/11/2024",
+            image: fares_img1,
+            link: "/flights/newyork"
+        },
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "10/11/2024",
+            image: fares_img2,
+            link: "/flights/newyork"
+        },
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "11/11/2024",
+            image: fares_img3,
+            link: "/flights/newyork"
+        },
+        {
+            to: "New York",
+            oldPrice: "LKR 400,000",
+            newPrice: "LKR 350,000",
+            airline: "Singapore Airlines",
+            date: "12/11/2024",
+            image: fares_img4,
+            link: "/flights/newyork"
+        }
+    ],
+    December: [
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "12/12/2024",
+            image: fares_img3,
+            link: "/flights/london"
+        },
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "13/12/2024",
+            image: fares_img4,
+            link: "/flights/london"
+        },
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "14/12/2024",
+            image: fares_img1,
+            link: "/flights/london"
+        },
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "15/12/2024",
+            image: fares_img3,
+            link: "/flights/london"
+        },
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "16/12/2024",
+            image: fares_img4,
+            link: "/flights/london"
+        },
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "17/12/2024",
+            image: fares_img2,
+            link: "/flights/london"
+        },
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "18/12/2024",
+            image: fares_img3,
+            link: "/flights/london"
+        },
+        {
+            to: "London",
+            oldPrice: "LKR 500,000",
+            newPrice: "LKR 450,000",
+            airline: "British Airways",
+            date: "19/12/2024",
+            image: fares_img4,
+            link: "/flights/london"
+        }
+    ],
+};
+
+
+export const fareMonths = ['October', 'November', 'December']; // Array of months

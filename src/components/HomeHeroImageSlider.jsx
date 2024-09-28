@@ -73,7 +73,7 @@ const HomeHeroImageSlider = () => {
             </div>
             <Link to="/offers">
                 <button
-                    className="mt-6 px-8 py-2 bg-btnOrange text-white rounded transition active:shadow-btnShadow">
+                    className="mt-6 px-8 py-2 bg-primaryOrange text-white rounded transition active:shadow-btnShadow">
                     Explore all offers
                 </button>
             </Link>

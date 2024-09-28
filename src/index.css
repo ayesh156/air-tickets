@@ -35,3 +35,94 @@
 }
 
 /* ----------- Home-hero-swiper End ----------- */
+
+/* ----------- Home-Fares-swiper ----------- */
+
+.home-fares-swiper .swiper-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 35px !important; /* Set the width of the circle */
+    height: 35px !important; /* Set the height of the circle */
+    border-radius: 50%; /* Make it circular */
+    border: 1px solid #B6B6B6 !important;
+    background-color: white; /* Change to your desired background color */
+    position: relative !important;
+}
+
+.home-fares-swiper .circle-button:hover {
+    background-color: #f0f0f0; /* Change color on hover */
+}
+
+.home-fares-swiper .swiper-button-prev-fare,
+.home-fares-swiper .swiper-button-next-fare {
+    color: #B6B6B6 !important; /* Change to your desired color */
+    height: 30px !important;
+    width: 30px !important; /* Increased width for the arrow */
+}
+
+.home-fares-swiper .swiper-button-prev-fare{
+    position: absolute;
+    left: 0 !important;
+}
+
+.home-fares-swiper .swiper-button-next-fare {
+    position: absolute;
+    right: 0 !important;
+
+}
+
+.home-fares-swiper .swiper-button-prev-fare::after,
+.home-fares-swiper .swiper-button-next-fare::after {
+    color: #B6B6B6 !important; /* Change to your desired color for arrow icons */
+}
+
+/* ----------- Home-Fares-swiper End ----------- */
+
+/* ----------- Home-Partner-swiper ----------- */
+
+.home-partner-swiper .swiper-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 35px !important; /* Set the width of the circle */
+    height: 35px !important; /* Set the height of the circle */
+    border-radius: 50%; /* Make it circular */
+    border: 1px solid #B6B6B6 !important;
+    background-color: white; /* Change to your desired background color */
+    position: relative !important;
+}
+
+.home-partner-swiper .circle-button:hover {
+    background-color: #f0f0f0; /* Change color on hover */
+}
+
+.home-partner-swiper .swiper-button-prev-partner-a,
+.home-partner-swiper .swiper-button-prev-partner-p,
+.home-partner-swiper .swiper-button-next-partner-a ,
+.home-partner-swiper .swiper-button-next-partner-p {
+    color: #B6B6B6 !important; /* Change to your desired color */
+    height: 30px !important;
+    width: 30px !important; /* Increased width for the arrow */
+}
+
+.home-partner-swiper .swiper-button-prev-partner-a,
+.home-partner-swiper .swiper-button-prev-partner-p{
+    position: absolute;
+    left: 0 !important;
+}
+
+.home-partner-swiper .swiper-button-next-partner-a ,
+.home-partner-swiper .swiper-button-next-partner-p {
+    position: absolute;
+    right: 0 !important;
+
+}
+
+.home-partner-swiper .swiper-button-prev-partner-a::after,
+.home-partner-swiper .swiper-button-prev-partner-p::after,
+.home-partner-swiper .swiper-button-next-partner-a::after,
+.home-partner-swiper .swiper-button-next-partner-p::after {
+    color: #B6B6B6 !important; /* Change to your desired color for arrow icons */
+}
+/* ----------- Home-Partner-swiper End ----------- */
