@@ -100,7 +100,7 @@ const Footer = () => {
                         </li>
                     ))}
                 </ul>
-                <span className="mt-4 text-blue-100 w-full text-[14px]">2024 © Star Cells (Pvt) Ltd | Designed & Developed by Silicon Radon Networks (Pvt) Ltd.</span>
+                <span className="mt-4 px-4 text-blue-100 w-full text-[14px]">2024 © Star Cells (Pvt) Ltd | Designed & Developed by Silicon Radon Networks (Pvt) Ltd.</span>
             </div>
         </footer>
 
