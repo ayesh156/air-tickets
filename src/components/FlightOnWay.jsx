@@ -81,15 +81,17 @@ const FlightOnWay = () => {
         // Optionally, you can set the textFieldValue based on the class if needed
     };
 
+    // Initial values for the Formik form
     const initialValues = {
         origin: "",
         destination: "",
         depart: "",
     };
 
+    // State for Autocomplete to store selected origin value
     const [originValue, setOriginValue] = useState(null); // State for Autocomplete
 
-
+    // Custom Listbox component for displaying Autocomplete options
     const topicBoxComponent = React.forwardRef(function ListboxComponent(
         props,
         ref
@@ -103,7 +105,7 @@ const FlightOnWay = () => {
         );
     });
 
-
+    // Function to handle form submission
     const handleSubmit2 = (values, {resetForm}) => {
         console.log("Origin :", originValue);
         console.log("Destination :", destinationValue);
@@ -114,9 +116,9 @@ const FlightOnWay = () => {
 
     return (
         <Formik
-            onSubmit={handleSubmit2}
-            initialValues={initialValues}
-            validationSchema={userSchema}
+            onSubmit={handleSubmit2} // Submit handler
+            initialValues={initialValues} // Form initial values
+            validationSchema={userSchema} // Validation schema for form fields
         >
             {({
                   values,
@@ -133,6 +135,7 @@ const FlightOnWay = () => {
                     <div className="flex lg:flex-row flex-col gap-4 justify-center md:px-0 px-5 max-w-7xl">
 
                         <div className="flex flex-row gap-2 justify-center">
+                            {/* Autocomplete for Origin */}
                             <div>
                                 <span>Origin</span>
                                 <Autocomplete
@@ -140,12 +143,13 @@ const FlightOnWay = () => {
                                     value={originValue} // Link the state here
                                     getOptionLabel={(option) => `${option.countryTitle}, ${option.label} (${option.flight})`}
                                     onChange={(event, newValue) => {
+                                        // Update origin value and Formik field value on selection
                                         setOriginValue(newValue); // Update the selected option state
                                         setFieldValue('origin', newValue ? newValue.label : ''); // Set the Formik value
                                         setFieldTouched('origin', false); // Set touched to true on
                                     }}
                                     renderOption={(props, option, {index}) => {
-                                        // Only render the category title if it's different from the last one
+                                        // Conditional rendering of category title
                                         const shouldRendercountryTitle = option.countryTitle !== lastcountryTitle;
 
                                         // Update lastcountryTitle
@@ -211,7 +215,7 @@ const FlightOnWay = () => {
                                     )}
                                     ListboxComponent={topicBoxComponent}
                                 />
-                                {/* Helper text with arrow */}
+                                {/* Error message for origin field */}
                                 {touched.origin && errors.origin && (
                                     <div className="absolute left-30 w-28 bg-[#FF6360] text-white mt-2 p-1 rounded-sm">
                                         <div className="relative">
@@ -225,11 +229,12 @@ const FlightOnWay = () => {
                             <div className="flex items-center mt-5">
                                 <TbArrowsExchange className="text-gray-300 text-2xl"/>
                             </div>
+                            {/* Autocomplete for Destination */}
                             <div>
                                 <span>Destination</span>
                                 <Autocomplete
                                     options={options}
-                                    value={destinationValue} // L
+                                    value={destinationValue} // State linked to Autocomplete for destination
                                     getOptionLabel={(option) => `${option.countryTitle}, ${option.label} (${option.flight})`}
                                     onChange={(event, newValue) => {
                                         setDestinationValue(newValue); // Update the selected option state
@@ -238,7 +243,7 @@ const FlightOnWay = () => {
 
                                     }}
                                     renderOption={(props, option, {index}) => {
-                                        // Only render the category title if it's different from the last one
+                                        // Conditional rendering of category title
                                         const shouldRendercountryTitle = option.countryTitle !== lastcountryTitle;
 
                                         // Update lastcountryTitle
@@ -302,9 +307,9 @@ const FlightOnWay = () => {
                                             }}
                                         />
                                     )}
-                                    ListboxComponent={topicBoxComponent}
+                                    ListboxComponent={topicBoxComponent} // Custom Listbox component
                                 />
-                                {/* Helper text with arrow */}
+                                {/* Error message for origin field */}
                                 {touched.destination && errors.destination && (
                                     <div className="absolute left-30 w-36 bg-[#FF6360] text-white mt-2 p-1 rounded-sm">
                                         <div className="relative">

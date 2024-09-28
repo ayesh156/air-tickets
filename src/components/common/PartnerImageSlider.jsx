@@ -6,6 +6,7 @@ import 'swiper/css/pagination'; // Import pagination styles
 import 'swiper/css/navigation'; // Import navigation styles
 import {HiOutlineChevronLeft, HiOutlineChevronRight} from "react-icons/hi2";
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
 const PartnerImageSlider = ({data}) => {
 

@@ -108,6 +108,7 @@ const FlightRoundTrip = () => {
 
 
     const handleSubmit2 = (values, {resetForm}) => {
+        // Log form values and selections for debugging
         console.log("Origin :", originValue);
         console.log("Destination :", destinationValue);
         console.log("Depart Date :", dayjs(departDate).format('YYYY-MM-DD'));
@@ -118,6 +119,7 @@ const FlightRoundTrip = () => {
 
     return (
         <Formik
+            // Handling form submission with validation
             onSubmit={handleSubmit2}
             initialValues={initialValues}
             validationSchema={userSchema}
@@ -135,7 +137,7 @@ const FlightRoundTrip = () => {
               }) => (
                 <form onSubmit={handleSubmit} className="flex flex-col">
                     <div className="flex lg:flex-row flex-col gap-4 justify-center md:px-0 px-5 max-w-7xl">
-
+                        {/* Form fields for Origin and Destination */}
                         <div className="flex flex-row gap-2 justify-center">
                             <div>
                                 <span>Origin</span>
@@ -281,8 +283,10 @@ const FlightRoundTrip = () => {
                                             variant="outlined"
                                             placeholder="Type any city or airport"
                                             className="rounded-[0.3rem]"
+                                            // Show error if the destination field has been touched and has an error
                                             error={touched.destination && Boolean(errors.destination)} // Show error if touched and
                                             style={{
+                                                // Adjust width based on screen size
                                                 width: window.innerWidth < 600 ? '150px' : window.innerWidth < 1200 ? '200px' : '258px', // Adjust width based on screen size
                                                 backgroundColor: 'white',
                                                 marginTop: '2px',
@@ -322,7 +326,9 @@ const FlightRoundTrip = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-1">
+                            {/* Departure and Return Date Picker */}
                             <div className="flex flex-col sm:flex-row justify-center items-center gap-1">
+                                {/* Departure Date Picker */}
                                 <div className="flex flex-col lg:mt-0 mt-5 sm:mt-9">
                                     <span>Depart</span>
                                     <div className="mt-[-6px] relative">
@@ -351,7 +357,7 @@ const FlightRoundTrip = () => {
                                                     }}
 
                                                 />
-                                                {/* Helper text with arrow */}
+                                                {/* Error message for departure date */}
                                                 {touched.depart && errors.depart && (
                                                     <div
                                                         className="absolute left-30 w-[10.2rem] top-[2.1rem] bg-[#FF6360] text-white mt-2 p-1 rounded-sm z-30">
@@ -367,6 +373,8 @@ const FlightRoundTrip = () => {
                                         </LocalizationProvider>
                                     </div>
                                 </div>
+
+                                {/* Return Date Picker */}
                                 <div className="flex flex-col lg:mt-0 mt-9">
                                     <span>Return</span>
                                     <div className="mt-[-6px] relative">
@@ -393,7 +401,7 @@ const FlightRoundTrip = () => {
                                                         },
                                                     }}
                                                 />
-                                                {/* Helper text with arrow */}
+                                                {/* Error message for return date */}
                                                 {touched.return && errors.return && (
                                                     <div
                                                         className="absolute left-30 w-36 top-[2.1rem] bg-[#FF6360] text-white mt-2 p-1 rounded-sm z-30">
@@ -410,6 +418,8 @@ const FlightRoundTrip = () => {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Travellers Section */}
                             <div className="flex flex-col justify-center gap-1 lg:mt-0 mt-9">
                                 <span>Travellers</span>
                                 <div className="mt-[-2px]">
@@ -506,9 +516,8 @@ const FlightRoundTrip = () => {
 
                             </div>
                         </div>
-
-
                     </div>
+
                     {/* Submit button */}
                     <div className="flex justify-center sm:justify-end mt-4">
                         <button

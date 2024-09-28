@@ -7,7 +7,6 @@ import 'swiper/css/effect-coverflow'; // Import coverflow effect styles
 import 'swiper/css/pagination'; // Import pagination styles
 import 'swiper/css/navigation'; // Import navigation styles
 import {Link} from "react-router-dom";
-import React from "react";
 
 const HomeHeroImageSlider = () => {
 

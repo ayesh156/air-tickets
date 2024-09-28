@@ -46,7 +46,7 @@ const Navbar = () => {
                                 navItems.map((item, index) => (
                                     <div
                                         key={index}
-                                        onMouseEnter={(e) => {
+                                        onMouseEnter={() => {
                                             if (item.path === "/more") {
                                                 toggleMoreMenu(true); // Open or close the dropdown
                                                 setIsHoveringMore(true); // Keep track of hovering
@@ -119,7 +119,7 @@ const Navbar = () => {
                                 systemItems.map((item, index) => (
                                     <div
                                         key={index}
-                                        onMouseEnter={(e) => {
+                                        onMouseEnter={() => {
                                             if (item.path === "/more") {
                                                 toggleSysMenu(true); // Open or close the dropdown
                                                 setIsHoveringMore(true); // Keep track of hovering

@@ -1,7 +1,4 @@
-import {AiOutlineGlobal} from "react-icons/ai";
 import {footerItems, footerDetailsImg, footerLinks, socialMediaLinks} from "../constants/index.jsx";
-import {useEffect, useState} from "react"; // Import data
-import {FaPlus, FaMinus} from "react-icons/fa";
 import {NavLink} from "react-router-dom";
 
 const Footer = () => {
@@ -12,7 +9,6 @@ const Footer = () => {
 
                 <div
                     className="hidden pt-5 pb-11 px-[3.5rem] mx-auto md:flex flex-col justify-between max-w-screen-xl items-center">
-                    {/* Footer columns grid */}
 
                     {/* Footer links for large screens */}
                     <ul className="space-x-4 md:space-x-16 md:flex text-titleGray text-md items-center justify-end hidden">
@@ -71,6 +67,7 @@ const Footer = () => {
 
                     <div className="border-b border-b-gray-200 my-6 w-full"></div>
 
+                    {/* Footer details images */}
                     <div className="grid grid-cols-3 px-[0.5rem] w-full">
                         {footerDetailsImg.map((section, index) => (
                             <div key={index}>
@@ -89,6 +86,8 @@ const Footer = () => {
                 </div>
 
             </div>
+
+            {/* Social media section */}
             <div className="bg-primaryBlue text-center flex flex-col justify-center items-center py-8">
                 <ul className="space-x-4 text-primaryBlue flex items-center md:items-end">
                     {/* Map through social media links */}

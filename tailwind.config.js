@@ -15,6 +15,9 @@ export default {
       boxShadow: {
         btnShadow: 'inset 0 2px 5px rgba(0, 0, 0, 0.2)', // Adjust values as needed
       },
+      screens: {
+        'md9': '991px', // Custom screen size at 991px
+      },
     },
   },
   plugins: [],

@@ -57,6 +57,7 @@ import fares_img2 from "../assets/home-img/fares_img/smCA.gif";
 import fares_img3 from "../assets/home-img/fares_img/smEK.gif";
 import fares_img4 from "../assets/home-img/fares_img/smQR.gif";
 
+// footerDetailsImg
 export const footerDetailsImg = [
     {
         title: "Member of",
@@ -188,6 +189,7 @@ export const travellersCategoryArray = [
 // travellersClass
 export const travellersClass = ["Economy", "Premium Economy", "Business", "First"];
 
+// citiesItem
 export const citiesItem = [
     {
         title: 'Sri Lanka',
@@ -221,6 +223,7 @@ export const citiesItem = [
     },
 ];
 
+// homeHeroImgSlider
 export const homeHeroImgSlider = [
     {
         image: air_asia_img,
@@ -233,6 +236,7 @@ export const homeHeroImgSlider = [
     {image: chennai_img, title: "Flight Tickets to India", label: "Reserve your seat today!"},
 ]
 
+// partnersImgSlider
 export const partnersImgSlider = [
     {
     title: "Airline Partners",
@@ -266,8 +270,7 @@ export const partnersImgSlider = [
             {image:az_payment_img, link:"#"},
         ]
     }
-]
-
+];
 
 // fareData
 export const fareData = {
@@ -495,5 +498,5 @@ export const fareData = {
     ],
 };
 
-
+// fareMonths
 export const fareMonths = ['October', 'November', 'December']; // Array of months
