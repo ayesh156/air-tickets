@@ -90,7 +90,7 @@ const Home = () => {
     }
 
     return (
-        <div className="relative text-white w-full mt-12">
+        <div className="relative text-white w-full md:mt-12">
             <div className={`relative bg-[#02578D] lg:bg-[#D93B07]`} style={{height: divHeight}}>
                 {/* Image and buttons container */}
                 <div className="relative overflow-hidden" style={{height: divHeight}}>
